@@ -1,0 +1,46 @@
+# import libraries 
+
+import time
+import numpy as np
+import pandas as pd
+import os
+import pickle as pkl
+from matplotlib import pyplot as plt
+from collections import defaultdict
+import nltk
+import re
+import json
+import csv
+import seaborn as sns
+from tqdm import tqdm
+from nltk.stem import WordNetLemmatizer
+from nltk.corpus import wordnet
+from nltk import sent_tokenize
+from nltk.tokenize import word_tokenize
+
+from collections import Counter
+
+%matplotlib inline
+pd.set_option('display.max_colwidth', 300)
+
+from keras.preprocessing.text import Tokenizer, text_to_word_sequence
+from keras.preprocessing.sequence import pad_sequences
+from keras.utils.np_utils import to_categorical
+from keras.optimizers import SGD
+from keras.models import load_model
+
+from keras.layers import Embedding
+from keras.layers import Dense, Input, Flatten, Lambda
+from keras.layers import Conv1D, MaxPooling1D, Embedding, Dropout, LSTM, GRU, Bidirectional, TimeDistributed
+from keras.models import Model, load_model
+
+from keras import backend as K
+from keras.engine.topology import Layer, InputSpec
+from keras import initializers, regularizers, optimizers
+from keras.callbacks import History, CSVLogger
+
+from sklearn.preprocessing import MultiLabelBinarizer
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import precision_score, recall_score, f1_score, precision_recall_curve, average_precision_score, auc
+from sklearn.feature_extraction.text import TfidfVectorizer
+
